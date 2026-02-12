@@ -236,7 +236,64 @@
             font-size: 0.9rem;
         }
 
-        /* Sección de libros destacados */
+        /* Sección de productos - Útiles escolares */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 28px rgba(230,126,34,0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-card h4 {
+            padding: 1rem 1rem 0.5rem;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .product-price {
+            padding: 0 1rem 1rem;
+            color: #e67e22;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Sección de categorías */
         .featured-books {
             margin-bottom: 3rem;
         }
@@ -497,6 +554,87 @@
             </div>
             <div>
                 <p>Somos tu librería digital de confianza, con más de 10,000 títulos disponibles y envíos a todo el país.</p>
+            </div>
+        </section>
+
+        <!-- Catálogo de Útiles Escolares -->
+        <section class="categories">
+            <div class="section-title">
+                <h3><i class="fas fa-pencil-alt"></i> Catálogo de Útiles Escolares</h3>
+                <a href="#" class="view-all">Ver todo <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid">
+                <!-- Cuadernos -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=300&h=300&fit=crop" alt="Cuaderno A4">
+                    </div>
+                    <h4>Cuaderno A4</h4>
+                    <p class="product-price">$4.99</p>
+                </div>
+
+                <!-- Lápices -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1609381240300-b1d24fac1ea1?w=300&h=300&fit=crop" alt="Juego de Lápices">
+                    </div>
+                    <h4>Juego de Lápices HB</h4>
+                    <p class="product-price">$3.50</p>
+                </div>
+
+                <!-- Bolígrafos -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608883866014-e88cdb7e2f88?w=300&h=300&fit=crop" alt="Bolígrafos">
+                    </div>
+                    <h4>Bolígrafos de Colores</h4>
+                    <p class="product-price">$5.99</p>
+                </div>
+
+                <!-- Mochilas -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" alt="Mochila Escolar">
+                    </div>
+                    <h4>Mochila Escolar</h4>
+                    <p class="product-price">$24.99</p>
+                </div>
+
+                <!-- Regla y Compás -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=300&h=300&fit=crop" alt="Set de Geometría">
+                    </div>
+                    <h4>Set de Geometría</h4>
+                    <p class="product-price">$6.99</p>
+                </div>
+
+                <!-- Pegamento -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608882657920-b52b27e0b014?w=300&h=300&fit=crop" alt="Pegamento Escolar">
+                    </div>
+                    <h4>Pegamento Escolar</h4>
+                    <p class="product-price">$2.49</p>
+                </div>
+
+                <!-- Borrador -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1589939705066-5470d37aa21b?w=300&h=300&fit=crop" alt="Borradores">
+                    </div>
+                    <h4>Juego de Borradores</h4>
+                    <p class="product-price">$1.99</p>
+                </div>
+
+                <!-- Estuche -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599958811969-2b90aeb340d1?w=300&h=300&fit=crop" alt="Estuche Escolar">
+                    </div>
+                    <h4>Estuche Escolar</h4>
+                    <p class="product-price">$8.99</p>
+                </div>
             </div>
         </section>
 
